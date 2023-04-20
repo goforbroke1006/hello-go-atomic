@@ -1,0 +1,63 @@
+# command-line-arguments
+main.main STEXT size=109 args=0x0 locals=0x28 funcid=0x0 align=0x0
+	0x0000 00000 (./cmd/sample3/main.go:7)	TEXT	main.main(SB), ABIInternal, $40-0
+	0x0000 00000 (./cmd/sample3/main.go:7)	CMPQ	SP, 16(R14)
+	0x0004 00004 (./cmd/sample3/main.go:7)	PCDATA	$0, $-2
+	0x0004 00004 (./cmd/sample3/main.go:7)	JLS	102
+	0x0006 00006 (./cmd/sample3/main.go:7)	PCDATA	$0, $-1
+	0x0006 00006 (./cmd/sample3/main.go:7)	SUBQ	$40, SP
+	0x000a 00010 (./cmd/sample3/main.go:7)	MOVQ	BP, 32(SP)
+	0x000f 00015 (./cmd/sample3/main.go:7)	LEAQ	32(SP), BP
+	0x0014 00020 (./cmd/sample3/main.go:7)	FUNCDATA	$0, gclocals·g2BeySu+wFnoycgXfElmcg==(SB)
+	0x0014 00020 (./cmd/sample3/main.go:7)	FUNCDATA	$1, gclocals·Plqv2ff52JtlYaDd2Rwxbg==(SB)
+	0x0014 00020 (./cmd/sample3/main.go:8)	LEAQ	type:uint32(SB), AX
+	0x001b 00027 (./cmd/sample3/main.go:8)	PCDATA	$1, $0
+	0x001b 00027 (./cmd/sample3/main.go:8)	NOP
+	0x0020 00032 (./cmd/sample3/main.go:8)	CALL	runtime.newobject(SB)
+	0x0025 00037 (./cmd/sample3/main.go:8)	MOVQ	AX, main.&counter+24(SP)
+	0x002a 00042 (./cmd/sample3/main.go:8)	MOVL	$0, (AX)
+	0x0030 00048 (./cmd/sample3/main.go:10)	MOVQ	$0, main.idx+16(SP)
+	0x0039 00057 (./cmd/sample3/main.go:10)	JMP	59
+	0x003b 00059 (./cmd/sample3/main.go:10)	CMPQ	main.idx+16(SP), $10
+	0x0041 00065 (./cmd/sample3/main.go:10)	JLT	69
+	0x0043 00067 (./cmd/sample3/main.go:10)	JMP	92
+	0x0045 00069 (./cmd/sample3/main.go:11)	MOVQ	main.&counter+24(SP), AX
+	0x004a 00074 (./cmd/sample3/main.go:11)	MOVL	$1, CX
+	0x004f 00079 (./cmd/sample3/main.go:11)	LOCK
+	0x0050 00080 (./cmd/sample3/main.go:11)	XADDL	CX, (AX)
+	0x0053 00083 (./cmd/sample3/main.go:11)	JMP	85
+	0x0055 00085 (./cmd/sample3/main.go:10)	INCQ	main.idx+16(SP)
+	0x005a 00090 (./cmd/sample3/main.go:10)	JMP	59
+	0x005c 00092 (./cmd/sample3/main.go:15)	PCDATA	$1, $-1
+	0x005c 00092 (./cmd/sample3/main.go:15)	MOVQ	32(SP), BP
+	0x0061 00097 (./cmd/sample3/main.go:15)	ADDQ	$40, SP
+	0x0065 00101 (./cmd/sample3/main.go:15)	RET
+	0x0066 00102 (./cmd/sample3/main.go:15)	NOP
+	0x0066 00102 (./cmd/sample3/main.go:7)	PCDATA	$1, $-1
+	0x0066 00102 (./cmd/sample3/main.go:7)	PCDATA	$0, $-2
+	0x0066 00102 (./cmd/sample3/main.go:7)	CALL	runtime.morestack_noctxt(SB)
+	0x006b 00107 (./cmd/sample3/main.go:7)	PCDATA	$0, $-1
+	0x006b 00107 (./cmd/sample3/main.go:7)	JMP	0
+	0x0000 49 3b 66 10 76 60 48 83 ec 28 48 89 6c 24 20 48  I;f.v`H..(H.l$ H
+	0x0010 8d 6c 24 20 48 8d 05 00 00 00 00 0f 1f 44 00 00  .l$ H........D..
+	0x0020 e8 00 00 00 00 48 89 44 24 18 c7 00 00 00 00 00  .....H.D$.......
+	0x0030 48 c7 44 24 10 00 00 00 00 eb 00 48 83 7c 24 10  H.D$.......H.|$.
+	0x0040 0a 7c 02 eb 17 48 8b 44 24 18 b9 01 00 00 00 f0  .|...H.D$.......
+	0x0050 0f c1 08 eb 00 48 ff 44 24 10 eb df 48 8b 6c 24  .....H.D$...H.l$
+	0x0060 20 48 83 c4 28 c3 e8 00 00 00 00 eb 93            H..(........
+	rel 23+4 t=14 type:uint32+0
+	rel 33+4 t=7 runtime.newobject+0
+	rel 103+4 t=7 runtime.morestack_noctxt+0
+go:cuinfo.producer.main SDWARFCUINFO dupok size=0
+	0x0000 2d 4e 20 2d 6c 20 72 65 67 61 62 69              -N -l regabi
+go:cuinfo.packagename.main SDWARFCUINFO dupok size=0
+	0x0000 6d 61 69 6e                                      main
+main..inittask SNOPTRDATA size=24
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0010 00 00 00 00 00 00 00 00                          ........
+type:.importpath.sync/atomic. SRODATA dupok size=13
+	0x0000 00 0b 73 79 6e 63 2f 61 74 6f 6d 69 63           ..sync/atomic
+gclocals·g2BeySu+wFnoycgXfElmcg== SRODATA dupok size=8
+	0x0000 01 00 00 00 00 00 00 00                          ........
+gclocals·Plqv2ff52JtlYaDd2Rwxbg== SRODATA dupok size=9
+	0x0000 01 00 00 00 01 00 00 00 00                       .........
